@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <title>CNRPS Tunisia</title>
+
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="header-img">
+        <a href="/home"><img src="../assets/img/logo1.jpg"></a> 
+      </div>
+     <ul>
+      <li> <div class="btn-btn">
+        <button><a href="login">Connexion</a></button>
+        <button><a href="register">Inscription</a></button>
+      </div>
+    </li>
+     </ul>
+    </nav>
+  </header>
+  <section id="video" class="section">
+    <div class="hero">
+      <h1>Caisse Nationale de Retraite <br>et de Prévoyance Sociale</h1>
+      <p></p>
+      <div>
+        <iframe width="510" height="320" 
+        src="https://www.youtube.com/embed/-U-zkWUh48c" 
+        title="طريقة التسجيل بفضاء الخدمات على الخط"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+        </iframe>
+        </div>
+    </div>
+  </section>
+  <section id="about" class="section">
+    <div class="container">
+      <h2>A propos du CNRPS Tunisie</h2>
+      <h3>Historique</h3>
+      <p>Créée en 1975 de la fusion de la Caisse Nationale de Retraite et de la Caisse de Prévoyance Sociale 
+        (toutes deux furent mises sur pied au lendemain de l’indépendance du pays, en 1959),
+        qui se partageaient le domaine de la retraite, pour la première, et celui de la couverture- maladie pour la seconde,
+        la CNRPS jouit depuis lors de la personnalité civile et de l’autonomie financière qui ont pour corollaire capacité juridique et autonomie de gestion.
+        En 1998, les services de la CREGT (Caisse de Retraite de l'Électricité du Gaz et du Transport) ont été transférés à la CNRPS.</p>
+        <h3>Organisation</h3>
+        <P>La CNRPS est administrée par un Conseil d'administration composé du Président Directeur Général et de 12 Administrateurs.
+          Elle comprend <br>
+          • 3 Directions Centrales<br>
+          • 24 Directions<br>
+          • 24 Centres régionaux<br>
+          • 7 Centres locaux</P>
+        <h3>Affiliés</h3>
+        <p>Les affiliés de la Caisse sont:<br>
+
+          - Les agents de l’Etat relevant des ministères et des Etablissements publics à caractère administratif .<br>
+          
+          - Les agents des collectivités publiques locales.<br>
+          
+          - Les agents des établissements publics non administratifs et des entreprises publiques dont la liste est arrêtée par décret
+          
+          </p>
+      </div>
+  </section>
+  
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Nos services</h2>
+      <p>Le CNRPS (Caisse Nationale de Retraite et de Prévoyance Sociale) en Tunisie est une institution chargée de la gestion des régimes de retraite et de prévoyance sociale pour les travailleurs du secteur public en Tunisie. Voici quelques-uns des services qu'il propose :<br><br>
+
+        <strong>1. Gestion des pensions de retraite :</strong> Le CNRPS est responsable de la gestion des pensions de retraite des fonctionnaires et agents de l'État en Tunisie. Il assure le calcul et le paiement des pensions aux retraités.<br><br>
+        
+        <strong>2. Cotisations sociales :</strong> Le CNRPS collecte les cotisations sociales auprès des employeurs du secteur public et des salariés affiliés. Ces cotisations sont destinées à financer les régimes de retraite et de prévoyance sociale.<br><br>
+        
+        <strong>3. Prestations familiales : </strong> Le CNRPS accorde des prestations familiales aux fonctionnaires et agents de l'État, telles que les allocations familiales, les allocations de maternité et les allocations de soutien familial.<br><br>
+        
+        <strong>4. Prévoyance sociale :</strong> Le CNRPS gère également des régimes de prévoyance sociale, tels que l'assurance décès et l'assurance maladie complémentaire, qui offrent une protection sociale supplémentaire aux affiliés.<br><br>
+        
+        <strong>5. Services en ligne : </strong>Le CNRPS propose des services en ligne pour faciliter les démarches administratives et la communication avec les affiliés. 
+                   Cela comprend la consultation des relevés de carrière, la demande de documents administratifs et la mise à jour des informations personnelles.</p>
+    </div>
+  </section>
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contactez-nous</h2>
+      <div class="col-xl-6">
+        <div >
+          
+          <form class="php-email-form"  #form>
+            <div class="row gy-4" >
+              <div class="col-md-6">
+                <input type="text" name="username" class="form-control" placeholder="Votre Nom d'utilisateur" [(ngModel)]="username" required >
+              </div>
+              <div class="col-md-6 ">
+                <input type="email" class="form-control" name="email" placeholder="Votre Email" [(ngModel)]="email" required >
+              </div>
+              <div class="col-md-12">
+                <input type="text" class="form-control" name="number" placeholder="Votre Numéro" [(ngModel)]="number" required >
+              </div>
+              <div class="col-md-12">
+                <input type="text" class="form-control" name="subject" placeholder="Votre Objet" [(ngModel)]="subject" required >
+              </div>
+              <div class="col-md-12">
+                <textarea class="form-control" name="message" rows="6" placeholder="Votre Message" [(ngModel)]="message" required >
+                </textarea>
+              </div>
+              <div class="col-md-12 text-center">
+                <button type="submit" (click)="send()">Envoyer un message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 CNRPS Tunisia. All rights reserved.</p>
+   
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="info-box card">
+                  <i class="bi bi-geo-alt">Address</i>
+                  <p>Adresse: 6, AV. Mohamed V<br>Tunis.1001 Tunis-République</p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="info-box card">
+                  <i class="bi bi-telephone">Contactez-nous</i>
+                  <p>Téléphone: (+216) 71 259 100 <br>Télécopie: (+216) 351 531.</p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="info-box card">
+                  <i class="bi bi-envelope">Email</i>
+                  <p>info@cnrps.nat.tn</p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="info-box card">
+                  <i class="bi bi-clock">Heure de travail</i>
+                  <p>De Lundi à Vendredi : de 8h à 17h<br>Samedi : de 9h à 12h.</p>
+                </div>
+              </div>
+            </div>
+          
+  
+      <div class="bi">
+      <iframe title="footer" width="650" height="250" 
+      src="https://app.powerbi.com/view?r=eyJrIjoiM2EwYmZkNDItMzdjNC00OThlLWFkZTMtYzI1ZTliOGM4MTExIiwidCI6ImRiZDY2NjRkLTRlYjktNDZlYi05OWQ4LTVjNDNiYTE1M2M2MSIsImMiOjl9&embedImagePlaceholder=true" 
+      frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+  </div>
+  </footer>
+</body>
+</html>

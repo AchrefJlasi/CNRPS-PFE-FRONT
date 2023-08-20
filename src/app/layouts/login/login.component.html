@@ -1,0 +1,106 @@
+<header>
+  <nav>  
+    <ul>         
+        <li><a href="home" style="color: #fff;">Acceuil</a></li>
+    </ul>
+  </nav>
+</header>
+<body>
+
+    <main>
+      <div class="container">
+  
+        <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+                <div class="d-flex justify-content-center py-4"> 
+                  <a href="/login" class="logo d-flex align-items-center w-auto" style="text-decoration: none;">
+                    <img src="./assets/img/logo1.jpg" alt="">
+                    <span class="d-none d-lg-block" >Connexion</span>
+                  </a>
+                </div><!-- End Logo -->
+  
+                <div class="card mb-3">
+  
+                  <div class="card-body">
+  
+                    <div class="pt-4 pb-2">
+                      <h5 class="card-title text-center pb-0 fs-4">Connectez-vous à votre compte</h5>
+                      <p class="text-center small">Entrez votre email et votre mot de passe pour vous connecter</p>
+                    </div>
+  
+                    <form  [formGroup]="loginform" (ngSubmit)="proceedlogin()" class="row g-3 needs-validation" novalidate>
+  
+                      <div class="col-12">
+                        <label for="yourUsername" class="form-label">email</label>
+                        <div class="input-group has-validation">
+                          <span class="input-group-text" id="inputGroupPrepend">@</span>
+                          <input type="text" name="username" class="form-control" id="username" required formControlName="email">
+                          <div *ngIf="loginform.controls.email.errors?.['email']" class="error-message">Entrez une adresse email valide.</div>
+
+                        </div>
+                      </div>
+  
+                      <div class="col-12">
+                        <label for="yourPassword" class="form-label">Mot de passe</label>
+                        <input type="password" name="password" class="form-control" id="password" required formControlName="password">
+                        <div class="invalid-feedback">"Veuillez entrer votre mot de passe!</div>
+                      </div>
+                      <div class="col-12">
+                        <button class="btn btn-primary w-100" type="submit">Se connecter</button>
+                      </div>
+                      <div class="col-12">
+                        <p class="small mb-0">Vous n'avez pas de compte ? <a href="/register">Créer un compte</a></p>
+                      </div>
+                    </form>
+                  
+                  </div>
+                </div>
+  
+              
+  
+              </div>
+            </div>
+          </div>
+  
+        </section>
+  
+      </div>
+    </main><!-- End #main -->
+  
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 CNRPS Tunisia. All rights reserved.</p>
+     
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="info-box card">
+                    <i class="bi bi-geo-alt">Address</i>
+                    <p>Adresse: 6, AV. Mohamed V<br>Tunis.1001 Tunis-République</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="info-box card">
+                    <i class="bi bi-telephone">Contactez-nous</i>
+                    <p>Téléphone: (+216) 71 259 100 <br>Télécopie: (+216) 351 531.</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="info-box card">
+                    <i class="bi bi-envelope">Email</i>
+                    <p>info@cnrps.nat.tn</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="info-box card">
+                    <i class="bi bi-clock">Heure de travail</i>
+                    <p>De Lundi à Vendredi : de 8h à 17h<br>Samedi : de 9h à 12h.</p>
+                  </div>
+                </div>
+              </div>
+    </div>
+    </footer>
+  </body>

@@ -1,0 +1,52 @@
+<app-adminheader></app-adminheader>
+  <app-sidebar1></app-sidebar1>
+  <div class="pagetitle">
+    <h1>Table des problèmes</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/admindash">Accueil</a></li>
+        <li class="breadcrumb-item">Table des problèmes</li>
+      </ol>
+    </nav>
+  </div><!-- End Page Title -->
+  <div id="Tableau">
+<table >
+<thead>
+  <tr>
+      <th>Id</th>
+      <th>Nom d'utilisateur</th>
+      <th>Email</th>
+      <th>Numéro</th>
+      <th>Objet</th>
+      <th>Message</th>
+      <th>Action</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let contacts of UsersArray">
+      <td>{{contacts.id}}</td>
+      <td>{{contacts.username}}</td>
+      <td>{{contacts.email}}</td>
+      <td>{{contacts.number}}</td>
+      <td>{{contacts.subject}}</td>
+      <td>{{contacts.message}}</td>
+      <td>
+        <button class="reply-button" (click)="openGmail()">
+          <i class="fa fa-reply"></i>
+        </button>
+        
+      <button *ngIf="contacts.resolved === 0" (click)="resolveContact(contacts.id)">
+        <i class="fa fa-check"></i>
+      </button>
+      <button *ngIf="contacts.resolved === 1" style="background-color: green; cursor: default;" disabled>
+        <i class="fa fa-check"></i>
+      </button>
+      <button (click)="deleteMessage(contacts.id)"> <i class="fa fa-trash"></i> 
+      </button>
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+
